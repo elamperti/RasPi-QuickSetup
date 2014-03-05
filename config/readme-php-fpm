@@ -1,0 +1,13 @@
+
+QUICK SUGGESTION ABOUT PHP-FPM
+==============================
+
+The default settings for PHP will work fine and it's already pretty well optimised 
+(it even uses Unix sockets rather than TCP to communicate with nginx), but from a 
+security standpoint we can ensure that PHP's FPM module will only listen to nginx
+(and therefore is less likely to be hacked) by typing:
+
+    sudo nano /etc/php5/fpm/pool.d/www.conf
+
+And un-commenting the lines listen.owner and listen.group. Save and exit the file.
+
