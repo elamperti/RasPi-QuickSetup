@@ -4,10 +4,11 @@ WWW_DIR=/var/www
 
 ## A pinch of hardening
 
-sudo cp config/iptables.rules /etc/iptables.firewall.rules
+sudo cp config/iptables.firewall.rules /etc/iptables.firewall.rules
 sudo iptables-restore < /etc/iptables.firewall.rules
 
 ## Now I don't remember why I had this, but ... well, I hope it was not something important.
+## Update: found the file but accidentally removed it before viewing it. Let's talk about that.
 #sudo cp ifup-firewall.sh /etc/network/if-pre-up.d/firewall
 #sudo chmod +x /etc/network/if-pre-up.d/firewall
 
