@@ -4,7 +4,7 @@
 sudo apt-get update
 
 ## Install apps
-sudo apt-get -y install ddclient dnsmasq wakeonlan python-smbus 
+sudo apt-get -y install ddclient dnsmasq wakeonlan python-smbus htop
 sudo apt-get -y install samba-common-bin samba
 
 ## Config file for dnsdynamic
