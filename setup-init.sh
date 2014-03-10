@@ -26,7 +26,7 @@ sudo dphys-swapfile swapoff
 sudo dphys-swapfile uninstall
 sudo update-rc.d dphys-swapfile remove
 ## not sure if this is necesary anymore:
-sudo apt-get remove dphys-swapfile
+sudo apt-get -y remove dphys-swapfile
 
 ###################
 ## Configuration! #
