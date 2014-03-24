@@ -6,7 +6,7 @@
 
 ## Cleaning up things we don't need
 sudo rm -rf /opt/sonic-pi
-sudo rm -rf /opt/vc
+#sudo rm -rf /opt/vc
 
 ## And programs we don't need
 sudo apt-get -y remove pcmanfm midori scratch leafpad galculator squeak-vm squeak-plugins-scratch xarchiver pistore qjackctl idle idle3 idle-python2.7 idle-python3.2 dillo netsurf-common netsurf-gtk sonic-pi xpdf timidity
@@ -50,6 +50,10 @@ sudo apt-get -y install dropbear
 ## After all this mess this becomes necessary
 sudo apt-get autoremove
 sudo apt-get --purge clean
+
+## Let's remove unused terminals!
+sudo sed -i "/[0-9] tty[3-7]/s/^/#/" /etc/inittab
+sudo sed -i "/ttyAMA0/s/^/#/" /etc/inittab
 
 ## CALL THE INSTALLER NOW!
 

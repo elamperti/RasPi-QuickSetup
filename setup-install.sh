@@ -4,11 +4,13 @@
 sudo apt-get update
 
 ## Install apps
-sudo apt-get -y install ddclient dnsmasq wakeonlan python-smbus htop
+sudo apt-get -y install ddclient dnsmasq dnstools wakeonlan python-smbus htop
 sudo apt-get -y install samba-common-bin samba
 
-## Config file for dnsdynamic
+## Config file for ddclient + enable daemon
 sudo cp config/ddclient.conf /etc/ddclient.conf
+sudo sed -i "s/^run_daemon=false/run_daemon=true/" /etc/init.d/ddclient
+sudo service ddclient restart
 
 ## Config file for DNS server
 sudo cp config/dnsmasq.conf /etc/dnsmasq.conf

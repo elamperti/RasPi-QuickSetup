@@ -18,6 +18,8 @@ sudo cp /etc/ddclient.conf ${BACKUP_FOLDER}/ddclient.conf
 sudo cp /etc/samba/smb.conf ${BACKUP_FOLDER}/smb.conf
 sudo cp /etc/nginx/nginx.conf ${BACKUP_FOLDER}/nginx.conf
 sudo cp /etc/monitorix.conf ${BACKUP_FOLDER}/monitorix.conf
+sudo cp /etc/init.d/deluge ${BACKUP_FOLDER}/deluge
+sudo cp $HOME/.config/deluge/auth ${BACKUP_FOLDER}/deluge.auth
 
 
 ## Other

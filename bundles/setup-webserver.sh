@@ -19,7 +19,7 @@ echo "Remember to edit /etc/fail2ban/jail.conf"
 
 ## NGINX server + PHP + MySQL
 
-sudo apt-get install nginx php5-fpm php5-curl php5-cli php5-mcrypt php-apc php5-mysql mysql-server # php5-gd
+sudo apt-get install nginx php5-fpm php5-curl php5-cli php5-mcrypt php-apc php5-mysql mysql-server php5-gd phpmyadmin
 
 echo "Adding $USER to group www-data"
 sudo usermod -a -G www-data $USER
