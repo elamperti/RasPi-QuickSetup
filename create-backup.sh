@@ -3,6 +3,7 @@
 BACKUP_FOLDER="backups/"`date +%Y%m%d`
 
 mkdir -p ${BACKUP_FOLDER}
+
 ## Bash files
 sudo cp $HOME/.bash* ${BACKUP_FOLDER}/
 
@@ -20,6 +21,9 @@ sudo cp /etc/nginx/nginx.conf ${BACKUP_FOLDER}/nginx.conf
 sudo cp /etc/monitorix.conf ${BACKUP_FOLDER}/monitorix.conf
 sudo cp /etc/init.d/deluge ${BACKUP_FOLDER}/deluge
 sudo cp $HOME/.config/deluge/auth ${BACKUP_FOLDER}/deluge.auth
+
+## User stuff
+#sudo cp $HOME/.bash_aliases ${BACKUP_FOLDER}/.bash_aliases
 
 
 ## Other

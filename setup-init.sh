@@ -36,7 +36,7 @@ sudo apt-get -y remove dphys-swapfile
 sudo dpkg-reconfigure tzdata
 
 ## Cure amnesia (and prevent time travel to a certain extent)
-sudo cp config/ntp.conf /etc/ntp.conf
+sudo cp config/etc/ntp.conf /etc/ntp.conf
 echo "It's suggested to update /etc/ntp.conf with a pool near you"
 echo "Visit http://www.pool.ntp.org/ for more information."
 
@@ -54,6 +54,10 @@ sudo apt-get --purge clean
 ## Let's remove unused terminals!
 sudo sed -i "/[0-9] tty[3-7]/s/^/#/" /etc/inittab
 sudo sed -i "/ttyAMA0/s/^/#/" /etc/inittab
+
+## Configure nullmailer (incomplete and obsolete)
+# read user-email
+# echo $user-email >> /etc/nullmailer/adminaddr
 
 ## CALL THE INSTALLER NOW!
 
